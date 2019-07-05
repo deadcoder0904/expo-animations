@@ -1,37 +1,32 @@
 import React from 'react'
-import { Animated, Easing, StyleSheet, View } from 'react-native'
+import { Animated, StyleSheet, View } from 'react-native'
 
 class App extends React.Component {
   constructor() {
     super()
-    this.spinValue = new Animated.Value(0)
+    this.springValue = new Animated.Value(0.3)
   }
 
   componentDidMount() {
-    this.spin()
+    this.spring()
   }
 
-  spin() {
-    this.spinValue.setValue(0)
-    Animated.timing(this.spinValue, {
+  spring() {
+    this.springValue.setValue(0.3)
+    Animated.spring(this.springValue, {
       toValue: 1,
-      duration: 4000,
-      easing: Easing.linear,
-    }).start(() => this.spin())
+      friction: 1,
+    }).start(() => this.spring())
   }
 
   render() {
-    const spin = this.spinValue.interpolate({
-      inputRange: [0, 1],
-      outputRange: ['0deg', '360deg'],
-    })
     return (
       <View style={styles.container}>
         <Animated.Image
           style={{
             width: 227,
             height: 200,
-            transform: [{ rotate: spin }],
+            transform: [{ scale: this.springValue }],
           }}
           source={require('./react-native-logo.png')}
         />
