@@ -28,6 +28,12 @@ See branch [04-parallel](../../tree/04-parallel)
 
 ## Sequence
 
-See branch [04-sequence](../../tree/04-sequence)
+See branch [05-sequence](../../tree/05-sequence)
 
 <img src="./sequence.gif" alt="Sequence Animations" width="270" height="520" />
+
+## Stagger
+
+See branch [06-stagger](../../tree/06-stagger)
+
+<img src="./stagger.gif" alt="Stagger Animations" width="270" height="520" />
