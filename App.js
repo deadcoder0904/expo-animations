@@ -22,27 +22,25 @@ class App extends React.Component {
       arr.map(item => {
         return Animated.timing(this.animatedValue[item], {
           toValue: 1,
-          duration: 50,
+          duration: 1000,
         })
       }),
     ).start()
   }
 
   render() {
-    const animations = arr.map((a, i) => {
-      return (
-        <Animated.View
-          key={i}
-          style={{
-            opacity: this.animatedValue[a],
-            height: 20,
-            width: 20,
-            backgroundColor: 'tomato',
-            margin: 2,
-          }}
-        />
-      )
-    })
+    const animations = arr.map((a, i) => (
+      <Animated.View
+        key={i}
+        style={{
+          opacity: this.animatedValue[a],
+          height: 20,
+          width: 20,
+          backgroundColor: 'tomato',
+          margin: 2,
+        }}
+      />
+    ))
     return (
       <View style={styles.container}>
         <StatusBar hidden />
