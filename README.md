@@ -25,3 +25,9 @@ See branch [03-spring](../../tree/03-spring)
 See branch [04-parallel](../../tree/04-parallel)
 
 <img src="./parallel.gif" alt="Parallel Animations" width="270" height="520" />
+
+## Sequence
+
+See branch [04-sequence](../../tree/04-sequence)
+
+<img src="./sequence.gif" alt="Sequence Animations" width="270" height="520" />
